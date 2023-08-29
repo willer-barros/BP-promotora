@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block sub_header %}
+
+      <form method="POST">
+          {% csrf_token %}
+
+          {{ form.as_p }}
+        <button type="submit">Salvar</button>
+          {% if up_post %}
+                <a href="{% url 'url_delete' obj_delete.id %}">Delete</a>
+          {% endif %}
+      </form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block sub_header %}
+
+    {% for post in posts %}
+       <section class="content">
+            <article>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.created_at|date:"d, M Y" }} by <a href="#">{{ post.author }}</a> </p>
+                <p>{{ post.summary|safe }}</p>
+                <p>{{ post.content }}</p>
+            </article>
+
+            <aside>
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">Categoria 1</a></li>
+                    <li><a href="#">Categoria 2</a></li>
+                </ul>
+            </aside>
+        </section>
+    {% endfor %}
+{% endblock %}

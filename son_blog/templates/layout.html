@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blog BP</title>
+</head>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    text-align: center;
+    background-color: rgb(247, 208, 101);
+    padding: 10px;
+    color: rgb(50,50,50);
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(235, 235 , 235);
+}
+
+nav li {
+    display: inline;
+    margin-right: 80px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(50,50,50)
+}
+
+.content h2{
+    text-align: center;
+    padding: 20px;
+    color: rgb(50,50,50);
+    font-size: 25px;
+}
+
+.content p{
+    padding: 3%;
+    font-size: 18px;
+    text-align: center;
+}
+
+aside h3{
+    text-align: center;
+    background-color: rgb(235, 235 , 235);
+    color: rgb(50,50,50);
+    padding-top:10px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(235, 235 , 235);
+}
+
+aside li{
+    padding: 10px;
+}
+
+aside a {
+    text-decoration: none;
+    color: rgb(50,50,50)
+}
+footer{
+    text-align: center;
+    background-color: rgb(247, 208, 101);
+    padding: 10px;
+}
+
+/*responsivo*/
+
+    @media (max-width: 800px) {
+    nav ul {
+        display: block;
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    nav li {
+        display: inline;
+        margin: 10px 10px;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Blog BP</h1>
+        </div><!--logo-->
+
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block sub_header %}{% endblock %}
+
+
+    <footer>
+        <p>&copy; 2023 Blog BP</p>
+    </footer>
+</body>
+</html>
